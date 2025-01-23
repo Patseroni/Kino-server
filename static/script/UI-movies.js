@@ -1,6 +1,7 @@
 createMovies()
 
 async function createMovies() {
+  /*
   try {
     const movies = await fetchAPI()
     console.log('Movies:', movies) //Test if movies get logged, and it gets logged as an array
@@ -12,7 +13,7 @@ async function createMovies() {
     if (!movies || movies.length === 0) {
       throw new Error('No movies found.')
     }
-
+*/
     const movieContainer = document.querySelector('.movie__wrapper')
 
     for (let i = 0; i < movies.length; i++) {

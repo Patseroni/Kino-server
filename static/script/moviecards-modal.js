@@ -84,7 +84,7 @@ async function createMovies(movies) {
     const movieContainer = document.querySelector('.movie__wrapper')
     const errorMessage = document.createElement('div')
     errorMessage.classList.add('error-message')
-    errorMessage.innerHTML = 'Error loading movies.'
-    movieContainer.appendChild(errorMessage)
+    //errorMessage.innerHTML = 'Error loading movies.'
+    //movieContainer.appendChild(errorMessage)
   }
 }

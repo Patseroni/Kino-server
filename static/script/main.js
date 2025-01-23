@@ -16,10 +16,11 @@ async function loadFrontPageContent() {
     console.log(frontPageImages)
 
     //IMAGES
+    /*
     const imageUrl = frontPageImages.backgroundImage
-    document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    document.body.style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url(${imageUrl})`
-
+*/
     return frontPageContent
   } catch (error) {
     console.error('Error loading front page content:', error)
