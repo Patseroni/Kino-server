@@ -1,1 +1,20 @@
-<h2>Movie images goes here</h2>
+<ul>
+{{#each movies }}
+  <li>
+    <a href="./movies.js{{ this.id }}">
+      {{ this.attributes.title }}
+    </a>
+  </li>
+{{/each}}
+</ul>
+
+<article class="movie">
+  <h1>{{ movie.attributes.title }}</h1>
+  <div class="intro">
+    {{{ movie.attributes.intro }}}
+  </div>
+  {{#if movie.attributes.image }}
+  <img src="{{ movie.attributes.image.url }}">
+  {{/if }}
+</article>
+

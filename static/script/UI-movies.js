@@ -23,11 +23,12 @@ async function createMovies() {
       movieDOM.classList.add('movie')
       movieDOM.setAttribute('id', 1 + i)
       movieContainer.appendChild(movieDOM)
-
+/*
       const movieAgeLimit = document.createElement('span')
       movieAgeLimit.classList.add('movie__age-limit')
       movieAgeLimit.innerHTML = movieData.ageLimit
       movieDOM.appendChild(movieAgeLimit)
+*/
 
       const moviePoster = document.createElement('img')
       moviePoster.classList.add('movie__poster')
@@ -39,18 +40,21 @@ async function createMovies() {
       movieTitle.classList.add('movie__title')
       movieTitle.innerHTML = movieData.title
       movieDOM.appendChild(movieTitle)
-
+/*
       const movieGenres = document.createElement('span')
       movieGenres.classList.add('movie__genres')
       movieGenres.innerHTML = movieData.genres.join(' / ')
       movieDOM.appendChild(movieGenres)
-
+*/
+/*
       //Listener when clicking on a movie
       movieDOM.addEventListener('click', () => {
         console.log('Clicked movie:', movieData.title)
         showModal(movieData)
       })
+*/
     }
+/*
   } catch (error) {
     console.error('Error fetching or displaying movies:', error)
     const movieContainer = document.querySelector('.movie__wrapper')
@@ -60,8 +64,10 @@ async function createMovies() {
     errorMessage.innerHTML = frontPageContent.error.loadMovies
     movieContainer.appendChild(errorMessage)
   }
+    */
 }
 
+/*
 // Function to show modal
 function showModal(movieData) {
   const modalContainer = document.querySelector('.movie-modal__container')
@@ -70,7 +76,7 @@ function showModal(movieData) {
     console.error('Modal container not found!')
     return
   }
-
+*/
   //modal content
   const modalContent = `
     <div>
@@ -89,4 +95,3 @@ function showModal(movieData) {
   document.querySelector('.movie-modal__close').addEventListener('click', () => {
     modalContainer.classList.remove('active')
   })
-}
