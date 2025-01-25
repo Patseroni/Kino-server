@@ -1,5 +1,6 @@
 *{
   font-family: verdana;
+  list-style:none;
 }
 
 .celebration-modal_rootcontainer {
@@ -273,7 +274,7 @@ body{
   background-color: #03658c;
   height: 110px;
   padding: 0px 20px 0px 20px;
-  min-width: 1440px;
+  min-width: 1000px;
   align-self: center;
   align-content: center;
   align-items: center;
@@ -521,7 +522,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1440px;
+  max-width: 1000px;
   box-shadow: 0px 0px 30px -8px #000;
 }
 
@@ -588,24 +589,13 @@ footer {
 /*# sourceMappingURL=styles.css.map */
 
 .movie__wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 20px;
+  width:100%;
 }
 
 /* Style for individual movie cards */
 .movie {
-  background-color: #012840;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  width:500px;
+  height:auto;
 }
 
 .movie__image {
@@ -668,3 +658,34 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+.intro{
+  margin-bottom: 20px;
+}
+
+.title{
+  margin-bottom: 30px;
+}
+
+.movie__wrapper li{
+  width:200px;
+  margin-right:20px;
+}
+
+.single-movie ul{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+a{
+  text-decoration: none;
+  list-style: none;
+}
+
+.single-movie img{
+  width: 100%;
+  height: 300px;
+  overflow-y: hidden; 
+}
+

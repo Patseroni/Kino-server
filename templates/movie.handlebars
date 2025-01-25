@@ -1,0 +1,10 @@
+<a href="/">Tillbaka till startsidan</a>
+<article class="movie">
+  <h1 class="title">{{ movie.attributes.title }}</h1>
+  <div class="intro">
+    {{{ movie.attributes.intro }}}
+  </div>
+  {{#if movie.attributes.image }}
+  <img src="{{ movie.attributes.image.url }}">
+  {{/if }}
+</article>

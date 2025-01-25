@@ -1,3 +1,4 @@
+
 /*
 async function fetchAPI() {
   const url = 'fake-MovieAPI.json'
@@ -17,4 +18,5 @@ async function fetchAPI() {
 
 fetchAPI()
 */
+
 
