@@ -1,36 +1,18 @@
-import { expect, test } from '@jest/globals';
-import request from 'supertest';
+import { expect, test } from '@jest/globals'
+import request from 'supertest'
+import { loadMovie, loadMovies } from '../src/movies.js'
+import app from '../src/app.js'
 
-import initApp from '../src/app.js';
+test('Confirm that movies shows the correct title', async () => {
+  const res = await request(app).get('/').expect('Content-Type', /html/).expect(200)
 
-test('Home page shows list of movies', async () => {
-  const app = initApp({
-    loadMovie: async () => ({
-      id: 1,
-      title: 'Encanto',
-      // ...
-    }),
-    loadMovies: async () => [
-      {
-        id: 1,
-        title: 'Encanto',
-      },
-      {
-        id: 2,
-        title: 'Forrest Gump',
-      },
-      {
-        id: 3,
-        title: 'Training Day',
-      }
-    ],
-  });
-  const response = await request(app)
-    .get('/')
-    .expect('Content-Type', /html/)
-    .expect(200);
-
-  expect(response.text).toMatch('Encanto');
-  expect(response.text).toMatch('Forrest Gump');
-  expect(response.text).toMatch('Training Day');
-});
+  expect(res.text).toMatch('Encanto')
+  expect(res.text).toMatch('Forrest Gump')
+  expect(res.text).toMatch('Fire Walk With Me')
+  expect(res.text).toMatch('Min granne Totoro')
+  expect(res.text).toMatch('Isle of dogs')
+  expect(res.text).toMatch('Pulp Fiction')
+  expect(res.text).toMatch('The Shawshank Redemption')
+  expect(res.text).toMatch('The Muppets')
+  expect(res.text).toMatch('Training Day')
+})

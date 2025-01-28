@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "prepare": "husky install",
     "build-css": "sass src/styles/main.scss dist/styles.css",
     "watch-css": "sass --watch src/styles/main.scss:dist/styles.css"
@@ -32,6 +33,7 @@
     ]
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "express": "^4.21.2",
     "express-handlebars": "^8.0.1",
     "handlebars": "^4.7.8",

@@ -5,20 +5,20 @@ addFrontPageContent()
 
 async function loadFrontPageContent() {
   try {
-    const contentResponse = await fetch('static/FrontPage-content.json')
+    const contentResponse = await fetch('/static/FrontPage-content.json')
     if (!contentResponse.ok) throw new Error('Failed to load content')
     const frontPageContent = await contentResponse.json()
     console.log(frontPageContent)
 
-    const imagesResponse = await fetch('static/FrontPage-images.json')
+    const imagesResponse = await fetch('/static/FrontPage-images.json')
     if (!imagesResponse.ok) throw new Error('Failed to load images')
     const frontPageImages = await imagesResponse.json()
     console.log(frontPageImages)
 
     //IMAGES
-    
+
     const imageUrl = frontPageImages.backgroundImage
-    document.body.style.backgroundImage = `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    document.body.style.backgroundImage = `linear-gradient(rgba(100, 110, 120, 1), rgba(100, 110, 120, 1)),
     url(${imageUrl})`
 
     return frontPageContent
