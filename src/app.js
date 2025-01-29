@@ -21,21 +21,3 @@ app.get('/movies/:movieId', async (req, res) => {
 app.use('/static', express.static('./static'))
 
 export default app
-
-// =============================================================== //
-/*
-async function renderPage(response, page){
-  response.render(page);
-  
-    const indexBuf = await fs.readFile(`./static/${page}.html`);
-    const indexText = indexBuf.toString();
-    
-    const templateBuf = await fs.readFile('./templates/template.html');
-    const templateText = templateBuf.toString();
-  
-    const output = templateText.replace('{{content}}', indexText);
-
-    response.send(output)   
-}
-*/
-// =============================================================== //

@@ -18,7 +18,7 @@ async function loadFrontPageContent() {
     //IMAGES
 
     const imageUrl = frontPageImages.backgroundImage
-    document.body.style.backgroundImage = `linear-gradient(rgba(100, 110, 120, 1), rgba(100, 110, 120, 1)),
+    document.body.style.backgroundImage = `linear-gradient(rgba(10, 20, 30, 0.8), rgba(100, 110, 120, 0.8)),
     url(${imageUrl})`
 
     return frontPageContent

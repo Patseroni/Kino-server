@@ -1,6 +1,5 @@
 import { expect, test } from '@jest/globals'
 import request from 'supertest'
-import { loadMovie, loadMovies } from '../src/movies.js'
 import app from '../src/app.js'
 
 test('Confirm that movies shows the correct title', async () => {
